@@ -156,23 +156,41 @@ export default function Landing() {
                                 className="h-12 w-auto object-contain"
                             />
                             <p className="max-w-[380px] text-xs leading-relaxed text-slate-400">
-                                Pendidikan dan Latihan Pelatih (DIKLATPEL) DKC CBP IPNU &amp; KPP IPPNU Kabupaten Magetan 2026.
+                                Pendidikan dan Latihan Pelatih (DIKLATPEL) DKC
+                                CBP IPNU &amp; KPP IPPNU Kabupaten Magetan 2026.
                             </p>
                         </div>
 
                         <div className="flex flex-col gap-4 text-xs font-medium text-slate-400 sm:flex-row sm:items-start sm:gap-8">
-                            <a href="mailto:pelajarnumagetan@gmail.com" className="flex items-center gap-2 pt-0.5 transition-colors hover:text-white">
+                            <a
+                                href="mailto:pelajarnumagetan@gmail.com"
+                                className="flex items-center gap-2 pt-0.5 transition-colors hover:text-white"
+                            >
                                 <Mail className="h-4 w-4 shrink-0" />
                                 <span>pelajarnumagetan@gmail.com</span>
                             </a>
                             <div className="flex flex-col gap-3">
-                                <a href="https://wa.me/6285806246254" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-white">
+                                <a
+                                    href="https://wa.me/6285806246254"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 transition-colors hover:text-white"
+                                >
                                     <Phone className="h-4 w-4 shrink-0" />
-                                    <span>Komandan Agung (+62 858-0624-6254)</span>
+                                    <span>
+                                        Komandan Agung (+62 858-0624-6254)
+                                    </span>
                                 </a>
-                                <a href="https://wa.me/6285816204251" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-white">
+                                <a
+                                    href="https://wa.me/6285816204251"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 transition-colors hover:text-white"
+                                >
                                     <Phone className="h-4 w-4 shrink-0" />
-                                    <span>Komandan Lutfi (+62 858-1620-4251)</span>
+                                    <span>
+                                        Komandan Lutfi (+62 858-1620-4251)
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -180,7 +198,8 @@ export default function Landing() {
 
                     <div className="mt-8 flex flex-col items-start justify-between border-t border-slate-800 pt-6 md:flex-row md:items-center">
                         <p className="text-xs text-slate-500">
-                            &copy; 2026 DKC CBP IPNU &amp; KPP IPPNU Kabupaten Magetan
+                            &copy; 2026 DKC CBP IPNU &amp; KPP IPPNU Kabupaten
+                            Magetan
                         </p>
                         <Link
                             href="/login"
