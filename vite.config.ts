@@ -1,0 +1,120 @@
+import inertia from '@inertiajs/vite';
+import { wayfinder } from '@laravel/vite-plugin-wayfinder';
+import babel from '@rolldown/plugin-babel';
+import tailwindcss from '@tailwindcss/vite';
+import react, { reactCompilerPreset } from '@vitejs/plugin-react';
+import laravel from 'laravel-vite-plugin';
+import { bunny } from 'laravel-vite-plugin/fonts';
+import { defineConfig, lazyPlugins } from 'vite-plus';
+import { VitePWA } from 'vite-plugin-pwa';
+
+export default defineConfig({
+    plugins: lazyPlugins(() => [
+        laravel({
+            input: ['resources/css/app.css', 'resources/js/app.tsx'],
+            refresh: true,
+            fonts: [
+                bunny('Instrument Sans', {
+                    weights: [400, 500, 600],
+                }),
+                bunny('Bricolage Grotesque', {
+                    weights: [600, 700],
+                }),
+            ],
+        }),
+        inertia(),
+        react(),
+        babel({
+            presets: [reactCompilerPreset()],
+        }),
+        tailwindcss(),
+        wayfinder({
+            formVariants: true,
+        }),
+        VitePWA({
+            outDir: 'public/build',
+            buildBase: '/build/',
+            injectRegister: 'auto',
+            manifest: {
+                name: 'DIKLATPEL CBP-KPP Magetan 2026',
+                short_name: 'DIKLATPEL',
+                description: 'Pendaftaran dan Absensi DIKLATPEL CBP-KPP 2026',
+                theme_color: '#ffffff',
+                background_color: '#ffffff',
+                display: 'standalone',
+                start_url: '/',
+                scope: '/',
+                icons: [
+                    {
+                        src: '/images/pwa-192x192.webp',
+                        sizes: '192x192',
+                        type: 'image/webp',
+                    },
+                    {
+                        src: '/images/pwa-512x512.webp',
+                        sizes: '512x512',
+                        type: 'image/webp',
+                    },
+                ],
+            },
+            workbox: {
+                navigateFallback: null,
+                globPatterns: ['**/*.{js,css,html,ico,png,webp,svg,woff2}'],
+            },
+            devOptions: {
+                enabled: true,
+                type: 'module',
+                navigateFallback: 'index.html',
+            },
+        }),
+    ]),
+    server: {
+        watch: {
+            ignored: [
+                '**/.agents/**',
+                '**/.claude/**',
+                '**/.cursor/**',
+                '**/.junie/**',
+                '**/vendor/**',
+            ],
+        },
+    },
+    build: {
+        target: ['es2015', 'safari14'],
+    },
+    lint: {
+        ignorePatterns: [
+            'vendor/**',
+            'node_modules/**',
+            'public/**',
+            'bootstrap/ssr/**',
+            'tailwind.config.js',
+            'resources/js/actions/**',
+            'resources/js/components/ui/*',
+            'resources/js/routes/**',
+            'resources/js/wayfinder/**',
+        ],
+        options: {
+            denyWarnings: true,
+            typeAware: true,
+        },
+    },
+    fmt: {
+        printWidth: 80,
+        tabWidth: 4,
+        singleQuote: true,
+        semi: true,
+        singleAttributePerLine: false,
+        htmlWhitespaceSensitivity: 'css',
+        ignorePatterns: [
+            '.github/**',
+            'composer.json',
+            'resources/js/components/ui/*',
+            'resources/views/mail/*',
+        ],
+        sortTailwindcss: {
+            functions: ['clsx', 'cn', 'cva'],
+            entryPoint: 'resources/css/app.css',
+        },
+    },
+});
