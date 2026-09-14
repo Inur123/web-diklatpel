@@ -28,7 +28,9 @@ Sistem ini adalah portal pendaftaran _Single Page Application_ (SPA) untuk memfa
 
 Sistem ini memastikan pengumpulan data peserta, unggahan berkas administratif, hingga proses _screening_ berjalan secara terpusat, modern, dan sangat cepat tanpa adanya _page reload_.
 
-URL deployment ditentukan melalui konfigurasi `APP_URL`.
+🔗 **URL Resmi:** [diklatpel.pelajarnumagetan.or.id](https://diklatpel.pelajarnumagetan.or.id)
+
+URL deployment dikonfigurasi melalui nilai `APP_URL` pada environment produksi.
 
 ---
 
