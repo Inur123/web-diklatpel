@@ -97,5 +97,5 @@ npm run build
 ---
 
 <div align="center">
-<i>Dikembangkan untuk DKC CBP IPNU & KPP IPPNU Kabupaten Magetan © 2026</i>
+<i>Dikembangkan untuk DKC CBP KPP PC IPNU IPPNU Kabupaten Magetan © 2026</i>
 </div>
