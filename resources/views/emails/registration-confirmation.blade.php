@@ -42,7 +42,7 @@
                     <!-- Header -->
                     <tr>
                         <td style="background: linear-gradient(135deg, #f97316 0%, #c2410c 100%); padding: 32px 40px; text-align: center;">
-                            <img src="cid:logo-putih-2-diklatpel.webp" alt="Logo DIKLATPEL" width="64" height="64" style="display: inline-block; margin-bottom: 16px;">
+                            <img src="cid:logo-putih-2-diklatpel.png" alt="Logo DIKLATPEL" width="64" height="64" style="display: inline-block; margin-bottom: 16px;">
                             <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3;">
                                 Pendaftaran Berhasil
                             </h1>
